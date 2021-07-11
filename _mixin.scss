@@ -1,0 +1,164 @@
+@mixin default-btn {
+    padding: 12px 25px;
+    background: linear-gradient(11deg, #d54720 31%, #f87e28);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+
+    &:hover {
+        color: white;
+        background: linear-gradient(11deg, #f87e28, #d54720 31%);
+    }
+}
+
+@mixin teacher-code {
+    position: relative;
+    transition: .4s ease-in-out;
+
+    &:hover {
+        ul {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    ul {
+        background-color: rgba(41, 162, 209, .7);
+        width: 300px;
+        text-align: center;
+        padding: 110px 0;
+        position: absolute;
+        top: 27px;
+        left: 45px;
+        opacity: 0;
+        visibility: hidden;
+
+        span {
+            font-size: 14px;
+            display: block;
+            margin-top: 15px;
+            color: white;
+        }
+
+        li {
+            display: inline-block;
+
+            strong {
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    color: black;
+                }
+            }
+
+            a {
+                display: block;
+                padding: 10px 15px;
+                color: white;
+                margin-top: 20px;
+                transition: .3s ease-out;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@mixin baner-btn-2 {
+    button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+    }
+
+    .learn-more {
+        width: 12rem;
+        height: auto;
+
+        .circle {
+            position: relative;
+            display: block;
+            margin: 0;
+            width: 3rem;
+            height: 3rem;
+            background: white;
+            border-radius: 1.625rem;
+
+            .icon {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                color: #cd2400;
+            }
+
+            .arrow {
+                left: 0.625rem;
+                width: 1.125rem;
+                height: 0.125rem;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: -0.25rem;
+                    right: 0.0625rem;
+                    width: 0.625rem;
+                    height: 0.625rem;
+                    border-top: 0.125rem solid #fff;
+                    border-right: 0.125rem solid #fff;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    .button-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: black;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:hover {
+            .circle {
+                width: 100%;
+            }
+
+            .icon {
+                &.arrow {
+                    background: white;
+                    transform: translate(1rem, 0);
+                }
+            }
+
+            .button-text {
+                color: white;
+            }
+        }
+    }
+
+
+
+}
